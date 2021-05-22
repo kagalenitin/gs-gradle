@@ -1,6 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'application'
+apply plugin: "jacoco"
 
 mainClassName = 'hello.HelloWorld'
 
@@ -24,6 +25,17 @@ targetCompatibility = 1.8
 dependencies {
     implementation "joda-time:joda-time:2.2"
     testImplementation "junit:junit:4.12"
+}
+
+test {
+    finalizedBy jacocoTestReport // report is always generated after tests run
+}
+
+jacocoTestReport {
+    dependsOn test // tests are required to run before generating the report
+    reports {
+        xml.enabled true
+    }
 }
 // end::dependencies[]
 
