@@ -9,5 +9,7 @@ public class HelloWorld {
 
 	Greeter greeter = new Greeter();
 	System.out.println(greeter.sayHello());
+
+	  System.out.println(greeter.addition(5, 2));
   }
 }
