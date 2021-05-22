@@ -1,3 +1,7 @@
+plugins {
+    id "jacoco"
+    id "org.sonarqube" version "2.7.1"
+}
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'application'
@@ -32,7 +36,6 @@ test {
 }
 
 jacocoTestReport {
-    dependsOn test // tests are required to run before generating the report
     reports {
         xml.enabled true
     }
