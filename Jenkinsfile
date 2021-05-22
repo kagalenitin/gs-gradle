@@ -3,7 +3,7 @@ node {
   myGradleContainer.pull()
   
   stage('prep') {
-    checkout ('scm')
+    checkout scm
   }
   
   stage('test') {
