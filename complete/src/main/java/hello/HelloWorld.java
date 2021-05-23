@@ -2,14 +2,19 @@ package hello;
 
 import org.joda.time.LocalTime;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class HelloWorld {
   public static void main(String[] args) {
 	LocalTime currentTime = new LocalTime();
-	System.out.println("The current local time is: " + currentTime);
+	  Logger logger = Logger.getLogger(HelloWorld.class.getName());
+	  logger.setLevel(Level.INFO);
+	  logger.log(Level.INFO, "The current local time is: " + currentTime);
 
-	Greeter greeter = new Greeter();
-	System.out.println(greeter.sayHello());
+	  Greeter greeter = new Greeter();
+	  logger.log(Level.INFO, greeter.sayHello());
 
-	System.out.println(greeter.addition(5, 2));
+	  logger.log(Level.INFO, String.valueOf(greeter.addition(5, 2)));
   }
 }
