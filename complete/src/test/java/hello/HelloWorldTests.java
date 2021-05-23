@@ -29,7 +29,7 @@ public class HelloWorldTests {
 
 	@Test
 	public void shouldPrintHelloWorldToConsole() {
-		assertEquals("The message is not correct", "Hello World", new Greeter().sayHello());
+		assertEquals("The message is not correct", "Hello world!", new Greeter().sayHello());
 	}
 
 	@Test
