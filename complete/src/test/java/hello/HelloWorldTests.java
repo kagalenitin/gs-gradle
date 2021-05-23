@@ -8,8 +8,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.containsString;
-import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertThat;
+import static org.junit.Assert.*;
 
 public class HelloWorldTests {
 
@@ -39,6 +38,11 @@ public class HelloWorldTests {
 	public void shouldPrintAddition() {
 		HelloWorld.main(new String[] { });
 		assertThat(output(), containsString("7"));
+	}
+
+	@Test
+	public void shouldPrintWrongAddition() {
+		assertNotEquals(4, new Greeter().addition(5, 4));
 	}
 	private String output() {
 		return new String(baos.toByteArray(), StandardCharsets.UTF_8);

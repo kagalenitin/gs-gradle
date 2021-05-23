@@ -1,6 +1,5 @@
 package hello;
 
-import java.util.Random;
 
 public class Greeter {
   public String sayHello() {
@@ -10,4 +9,5 @@ public class Greeter {
   public int addition(int num1, int num2 ) {
       return num1 + num2;
   }
+
 }
