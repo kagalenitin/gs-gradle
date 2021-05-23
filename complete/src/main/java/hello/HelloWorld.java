@@ -12,9 +12,5 @@ public class HelloWorld {
 	  logger.setLevel(Level.INFO);
 	  logger.log(Level.INFO, "The current local time is: " + currentTime);
 
-	  Greeter greeter = new Greeter();
-	  logger.log(Level.INFO, greeter.sayHello());
-
-	  logger.log(Level.INFO, String.valueOf(greeter.addition(5, 2)));
   }
 }

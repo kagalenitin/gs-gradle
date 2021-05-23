@@ -20,24 +20,21 @@ public class HelloWorldTests {
 		System.setOut(ps);
 	}
 
-	@Test
-	public void shouldPrintTimeToConsole() {
-		HelloWorld.main(new String[] { });
-
-		assertThat(output(), containsString("The current local time is"));
-	}
+//	@Test
+//	public void shouldPrintTimeToConsole() {
+//		HelloWorld.main(new String[] { });
+//
+//		assertThat(output(), containsString("The current local time is"));
+//	}
 
 	@Test
 	public void shouldPrintHelloWorldToConsole() {
-		HelloWorld.main(new String[] { });
-
-		assertThat(output(), containsString("Hello world!"));
+		assertEquals("The message is not correct", "Hello World", new Greeter().sayHello());
 	}
 
 	@Test
 	public void shouldPrintAddition() {
-		HelloWorld.main(new String[] { });
-		assertThat(output(), containsString("7"));
+		assertEquals("The addition value is incorrect", 9, new Greeter().addition(5, 4));
 	}
 
 	@Test
